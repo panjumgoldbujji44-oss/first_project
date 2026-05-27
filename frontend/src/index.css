@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter text-accent-navy bg-primary-cream;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold text-accent-navy tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-glass;
+  }
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/50 shadow-soft hover:shadow-float transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-primary-beige;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-gold/60 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-gold;
+}
