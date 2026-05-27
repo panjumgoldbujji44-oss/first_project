@@ -15,7 +15,7 @@ import Login from './pages/Login';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="font-inter text-accent-navy">
         <Navbar />
         <main>
